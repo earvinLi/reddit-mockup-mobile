@@ -9,6 +9,7 @@ import { Provider } from 'react-redux';
 import { StyleSheet, Text, View } from 'react-native';
 
 // Internal Dependencies
+import AppHeader from './src/AppHeader/AppHeader';
 import AppReducer from './src/App/AppReducer';
 import PostList from './src/PostList/PostList';
 
@@ -20,7 +21,7 @@ const App = () => {
   return (
     <Provider store={appStore}>
       <View style={styles.container}>
-        <Text>Reddit Mockup</Text>
+        <AppHeader />
         <PostList />
       </View>
     </Provider>
@@ -31,8 +32,6 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     backgroundColor: '#fff',
-    flex: 1,
-    justifyContent: 'center',
   },
 });
 
