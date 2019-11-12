@@ -6,7 +6,7 @@ import {
   applyMiddleware,
 } from 'redux';
 import { Provider } from 'react-redux';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
 
 // Internal Dependencies
 import AppHeader from './src/AppHeader/AppHeader';
@@ -20,19 +20,12 @@ const appStore = createStore(AppReducer, applyMiddleware(ReduxThunk));
 const App = () => {
   return (
     <Provider store={appStore}>
-      <View style={styles.container}>
+      <View>
         <AppHeader />
         <PostList />
       </View>
     </Provider>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-});
+};
 
 export default App;

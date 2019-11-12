@@ -7,8 +7,6 @@ import { Text } from 'react-native';
 import PostListCard from './PostListCard';
 import { fetchPosts } from './action/PostListAction';
 
-// Local Variables
-
 // Component Definition
 const PostList = (props) => {
   const {
